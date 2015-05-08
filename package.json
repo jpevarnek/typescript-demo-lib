@@ -1,0 +1,21 @@
+{
+  "name": "jpevarnek-demo-lib",
+  "version": "1.0.4",
+  "description": "Example library",
+  "main": "dist/index.js",
+  "dependencies": {
+    "circular-json": "^0.1.6",
+    "lodash": "^3.8.0"
+  },
+  "devDependencies": {
+    "tsd": "^0.6.0-beta.5",
+    "typescript": "^1.5.0-beta"
+  },
+  "typescript": {
+    "definition": "lib.d.ts"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/tsd reinstall && node_modules/.bin/tsd rebundle && node_modules/.bin/tsc --module commonjs --outDir dist -d src/index.ts",
+    "clean": "rm -rf dist typings node_modules"
+  }
+}
